@@ -14,7 +14,7 @@ export class ServersComponent {
 
   allowNewServer = false;
   serverCreationStatus = "No server was created";
-  serverName='';
+  serverName='testServer';
   constructor(){
     setTimeout(() => this.allowNewServer=true, 2000);
   }
