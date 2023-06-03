@@ -19,6 +19,10 @@
 </button>
 <!-- <p>{{serverCreationStatus}}</p> -->
 <!-- commeent : the * means that this directive is structural directive that changes the DOM -->
-<p *ngIf="serverCreated">Server was created, server nale is {{serverName}}</p>
+<p *ngIf="serverCreated else noServer">Server was created, server nale is {{serverName}}</p>
+<!-- # is al cla reference -->
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
