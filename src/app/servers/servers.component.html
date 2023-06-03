@@ -17,6 +17,8 @@
 >
     Add server
 </button>
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+<!-- commeent : the * means that this directive is structural directive that changes the DOM -->
+<p *ngIf="serverCreated">Server was created, server nale is {{serverName}}</p>
 <app-server></app-server>
 <app-server></app-server>
