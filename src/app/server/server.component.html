@@ -1,4 +1,24 @@
 <!-- we use "attribute diectives" without *, becasue they don't change the DOM   -->
-<p [ngStyle]="{backgroundColor:getColour()}"> 
+<!-- Using ngClass directive with ts styles class -->
+<p [ngStyle]="{backgroundColor:getColour()}"
+[ngClass]="{online: serverStatus=='online'}"> 
+    {{'server'}} with ID {{serveId}} is {{serverStatus}}
+</p>
+
+<!-- Using ngClass directive with ts styleUrls css files -->
+<p [ngStyle]="{backgroundColor:getColour()}"
+[ngClass]="{moreonline: serverStatus=='online'}"> 
+    {{'server'}} with ID {{serveId}} is {{serverStatus}}
+</p>
+
+<!-- Using css class with ts styleUrls css files -->
+<p [ngStyle]="{backgroundColor:getColour()}"
+class="lessonline"> 
+    {{'server'}} with ID {{serveId}} is {{serverStatus}}
+</p>
+
+<!-- Using css class with ts styles class -->
+<p [ngStyle]="{backgroundColor:getColour()}"
+class="online"> 
     {{'server'}} with ID {{serveId}} is {{serverStatus}}
 </p>
