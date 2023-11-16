@@ -6,4 +6,12 @@ import { Component } from "@angular/core";
 })
 export class ServerComponent{
 
+    serverId : number = 10;
+    serverName : string = "premier serveur";
+    serverFunction : string = "Fonction du seuveur";
+
+    getTheServerFunction(){
+        return this.serverFunction;
+    }
+
 }
