@@ -6,6 +6,10 @@
     {{serverCreationStatus}}
 </p>
 
+<label for="">Nom du serveur</label>
+
+<input type="text" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
 
 <app-server></app-server>
 <app-server></app-server>
