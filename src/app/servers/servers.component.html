@@ -1,15 +1,33 @@
 <!-- With element the binding will change wheneever the element change   -->
-<button class="btn btn-primary" [disabled]="!allowNewServer" 
+
+<label for="">Nom du serveurInit-Event</label>
+<input type="text" (input)="onInitServerName($event)">
+
+<br>
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer"  -->
+    <!-- <button class="btn btn-primary" [disabled]:`serverInit!=""`  -->
+<button class="btn btn-primary" [disabled]="serverInit==''" 
 (click)="onCreationServer()"
 >Add a server</button>
 <p>
     {{serverCreationStatus}}
 </p>
 
-<label for="">Nom du serveur</label>
+<!-- <label for="">Nom du serveur-After update</label>
+<input type="text" (input)={{serverName}}> -->
 
+<br>
+<label for="">Nom du serveur-string interpollation </label>
+{{serverName}} 
+
+<br>
+<label for="">Nom du serveurInit-Event</label>
 <input type="text" (input)="onUpdateServerName($event)">
-<p>{{serverName}}</p>
+
+<br>
+<label for="">Nom du serveur-2 ways binding</label>
+<input type="text" [(ngModel)]="serverName" class="form-control">
+
 
 <app-server></app-server>
 <app-server></app-server>
