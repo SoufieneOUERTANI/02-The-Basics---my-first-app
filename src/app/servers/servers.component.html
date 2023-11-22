@@ -1,7 +1,8 @@
 <!-- With element the binding will change wheneever the element change   -->
 
 <label for="">Nom du serveurInit-Event</label>
-<input type="text" (input)="onInitServerName($event)">
+<!-- <input type="text" (input)="onInitServerName($event)"> -->
+<input type="text" [(ngModel)]="serverInit">
 
 <br>
 <!-- <button class="btn btn-primary" [disabled]="!allowNewServer"  -->
@@ -12,6 +13,11 @@
 <p>
     {{serverCreationStatus}}
 </p>
+<p *ngIf="serverCreated && serverName && !serverInit else noServer"> le serveur {{serverName}} a été créé </p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
+
 
 <!-- <label for="">Nom du serveur-After update</label>
 <input type="text" (input)={{serverName}}> -->
