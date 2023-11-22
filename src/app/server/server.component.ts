@@ -9,9 +9,17 @@ export class ServerComponent{
     serverId : number = 10;
     serverName : string = "premier serveur";
     serverFunction : string = "Fonction du seuveur";
+    serverStatus : string = "";
 
     getTheServerFunction(){
         return this.serverFunction;
     }
 
+    constructor(){
+        this.serverStatus=(Math.random()>0.5)?"online":"offline";
+    }
+
+    getserverColour() : string{
+        return (this.serverStatus=="online")?"green":"red";
+    }
 }
