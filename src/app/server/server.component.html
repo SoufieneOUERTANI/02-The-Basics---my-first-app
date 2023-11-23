@@ -2,4 +2,30 @@
 <h2>Les autres composants ne sont pas impactés</h2> 
 <h3>This servers named {{ serverName }} had an id {{ serverId }} and the function {{ getTheServerFunction() }}</h3>
 
+<!-- Only ngStyle -->
 <p [ngStyle]="{backgroundColor:getserverColour()}"> le serveur est {{serverStatus}} </p>
+
+<!-- Only ngCalss -->
+<p [ngClass]="serverStatus== 'online'?'moreonline':'lessonline'"
+> le serveur est {{serverStatus}} </p>
+
+<!-- ngStyle and ngClass -->
+<p [ngStyle]="{backgroundColor:getserverColour()}"
+[ngClass]="serverStatus== 'online'?'moreonline':'lessonline'"
+> le serveur est {{serverStatus}} </p>
+
+<!-- ngStyle and class from ts file styles component -->
+<p [ngStyle]="{backgroundColor:getserverColour()}"
+class="online"
+> le serveur est {{serverStatus}} </p>
+
+<!-- ngStyle and class from css file -->
+<p [ngStyle]="{backgroundColor:getserverColour()}"
+class="moreonline"
+> le serveur est {{serverStatus}} </p>
+
+
+
+
+
+

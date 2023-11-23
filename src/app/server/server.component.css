@@ -1,0 +1,13 @@
+.moreonline{
+    font-style: italic;
+    color:yellow;
+    font-weight:bold;
+    font-size: 150%;
+}
+
+.lessonline{
+    font-style: italic;
+    color:black;
+    font-weight:bold;
+    font-size: 50%;
+}
