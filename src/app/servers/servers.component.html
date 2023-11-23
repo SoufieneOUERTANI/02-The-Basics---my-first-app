@@ -34,6 +34,8 @@
 <label for="">Nom du serveur-2 ways binding</label>
 <input type="text" [(ngModel)]="serverName" class="form-control">
 
-
-<app-server></app-server>
-<app-server></app-server>
+<!-- 
+Not relating any data from the server component .. 
+Just lopp as much times as there is data in the servers list  
+-->
+<app-server *ngFor="let server of servers"></app-server>
